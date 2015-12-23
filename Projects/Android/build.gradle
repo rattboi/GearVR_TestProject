@@ -12,6 +12,12 @@ android {
   compileSdkVersion 19
   buildToolsVersion '22.0.1'
 
+  buildTypes {
+    debug {
+      jniDebuggable true
+    }
+  }
+
   sourceSets {
     main {
       manifest.srcFile 'AndroidManifest.xml'

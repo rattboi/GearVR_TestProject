@@ -13,10 +13,10 @@ Copyright   :   Copyright 2014 Oculus VR, LLC. All Rights reserved.
 #define OVRAPP_H
 
 #include "App.h"
-#include "SceneView.h"
+#include "GuiSys.h"
+#include "OVR_Locale.h"
 #include "SoundEffectContext.h"
 #include <memory>
-#include "GuiSys.h"
 
 namespace OvrTemplateApp
 {
@@ -42,7 +42,9 @@ private:
 	OVR::OvrGuiSys *		GuiSys;
 	class OVR::ovrLocale *	Locale;
 
-	OVR::OvrSceneView		Scene;
+	ovrMatrix4f			CenterEyeViewMatrix;
+	OVR::GlProgram myShaderProgram;
+	OVR::GlGeometry myMesh;
 };
 
 } // namespace OvrTemplateApp
